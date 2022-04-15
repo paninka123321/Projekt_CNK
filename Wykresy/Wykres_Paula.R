@@ -37,45 +37,58 @@ Trudnosc_1 <- Trudnosc_vs_Zainteresowanie %>%
   filter(Difficulty == 1) %>% 
   group_by(Gender, Interest) %>% 
   summarise(Amount = n(), .groups = "drop")
+#195 dzieci
+
 
 Trudnosc_2 <- Trudnosc_vs_Zainteresowanie %>% 
   select(Difficulty, Interest, Gender) %>% 
   filter(Difficulty == 2) %>% 
   group_by(Gender, Interest) %>% 
   summarise(Amount = n(), .groups = "drop")
+#438 dzieci
 
 Trudnosc_3 <- Trudnosc_vs_Zainteresowanie %>% 
   select(Difficulty, Interest, Gender) %>% 
   filter(Difficulty == 3) %>% 
   group_by(Gender, Interest) %>% 
   summarise(Amount = n(), .groups = "drop")
+#445 dzieci
 
 Trudnosc_4 <- Trudnosc_vs_Zainteresowanie %>% 
   select(Difficulty, Interest, Gender) %>% 
   filter(Difficulty == 4) %>% 
   group_by(Gender, Interest) %>% 
   summarise(Amount = n(), .groups = "drop")
+#554 dzieci
 
 chart1 <- Trudnosc_1 %>% ggplot(aes(x = Interest, y = Amount, fill = Gender)) +
   geom_col() +
   labs(title = "Very Easy") +
   theme(legend.position = "none") +
-  theme_bw()
+  theme_bw() +
+  ylim(0, 180)
+
 chart2 <- Trudnosc_2 %>% ggplot(aes(x = Interest, y = Amount, fill = Gender)) +
   geom_col() +
   labs(title = "Easy") +
   theme(legend.position = "none")+
-  theme_bw()
+  theme_bw() +
+  ylim(0, 180)
 chart3 <- Trudnosc_3 %>% ggplot(aes(x = Interest, y = Amount, fill = Gender)) +
   geom_col()+
   labs(title = "Not so hard") +
   theme(legend.position = "none") + 
-  theme_bw()
+  theme_bw() +
+  ylim(0, 180)
 chart4 <- Trudnosc_4 %>% ggplot(aes(x = Interest, y = Amount, fill = Gender)) +
   geom_col()+
   labs(title = "Hard") + 
-  theme_bw()
+  theme_bw()+
+  ylim(0, 180)
 
 
-chart1 + chart2 + chart3 + chart4 + plot_annotation(title = "Measure of difficulty")
+chart1 + chart2 + chart3 + chart4 + plot_annotation(title = "Measure of difficulty") +
+  plot_layout(guides = 'collect')
+
+
 
