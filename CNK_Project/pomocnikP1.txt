@@ -1,0 +1,251 @@
+1-DZIEWCZYNA
+2-CHŁOPAK
+
+Chemia fizyka biologia geografia
+
+
+Pytania typu jak bardzo jesteś zainteresowany
+1-zdecydowanie nie 4-zdecydowanie tak
+
+A1 O czym chce wiedzić więcej?
+
+Q5_1 - związki chemiczne, ich właściwości i reakcje        chemia   
+Q5_2 - wnętrze ziemii                                      geografia
+Q5_3 -  jak góry, rzeki i oceany powstają i się zmieniają  geografia
+Q5_4 - chmury, deszcz i pogoda                             geografia
+Q5_5 - pochodzenie życia na ziemii                         geografia
+Q5_6 - dziedziczenie, czyli jak geny wpływają na nasz rozwój    biologia
+Q5_7 - płeć i rozmnażanie                                    biologia     
+Q5_8 - atomy i cząsteczki                                   chemia
+Q5_9 - ewolucja zwierząt i roślin                           biologia
+Q5_10 - światło wokół nas, którego nie możemy zobaczyć (utrafiolet,podczerwień)   fizyka
+Q5_11 - jak różne instrumenty muzyczne wytwarzają różne dźwięki             fizyka/nic
+Q5_12 - czarne dziury, nowe obiekty w przestrzeni kosmicznej                fizyka
+Q5_13 - jak meteory, komety, asteroidy mogą powodowa zniszczenie na ziemii  fizyka
+Q5_14 - trzesienia ziemii i wulkany                       geografia
+Q5_15 - 16???
+
+A2 o czym chce wiedzieć więcej?
+
+Q21_1 - jak ludzie, rośliny, zwierzęta zależ od siebie     biologia
+Q21_2 - tornada, huragany i cyklony                        geografia
+Q21_3 - bezwzględnie niebezpieczne i groźne zwierzęta      biologia
+Q21_4 - trujące rośliny w mojej okolicy                    biologia
+Q21_5 - jak działa bomba atomowa                           fizyka/chemia
+Q21_6 - wybuchowe związki chemiczne                        chemia
+Q21_7 - skutek uderzenia prądem i wpływ pioruna na ciało ludzkie   biologia
+Q21_8 - nieważkość w przestrzeni                          fizyka
+Q21_9 - jak oko widzi światło i kolory                    fizyka/biologia
+Q21_10 - co jeść aby zachować zdrowie i sprawność         biologia
+Q21_11 - zaburzenia odżywiania takie jak anoreksja i bulimia  biologia
+Q21_12 - jak ćwiczyć aby ciało było sprawne i silne       biologia?
+Q21_13 - chirurgia plastyczna i kosmetyka                 biologia
+Q21_14 - jak promieniowanie w solariach i ze słońca wpływa na skóre  biologia/fizyka
+Q21_15 - jak ucho słyszy różne dźwięki                    biologia
+Q21_16 - rakiety satelity i podróże kosmiczne             fizyka
+Q21_17 - jak promieniowanie rentgenowskie, ultradźwięki itp. są wykorzystywane w medycynie    biologia/fizyka
+Q21_18 - jak działa elektrownia jądrowa                   fizyka
+
+C o czym chce wiedzieć więcej?
+
+Q7_1 - jak działa telefon komórkowy                                 nic/informatyka
+Q7_2 - możliwości życia poza ziemią                                 nic/fizyka
+Q7_3 - życie, śmierć i dusza ludzka                                 nic
+Q7_4 - dlaczego śnimy podczas snu i co zny mogą oznaczać            nic
+Q7_5 - duchy i czarownice oraz czy mogą istnieć                     nic
+Q7_6 - przekazywanie myśli, czytanie w myślach, intuicja, 6 zmysł   nic
+Q7_7 - dlaczego gwiazdy migoczą a niebo jest niebieskie  
+Q7_8 - dlaczego widzimy tęczę                                       fizyka
+Q7_9 - właściwości kamieni szlachetnych, kryształów oraz jak można je wykorzystać do urody chemia/biologia
+Q7_10 - jak osiągnąć bardziej zrównoważone społeczeństwo            geografia
+Q7_11 - jak emisja dwutlenku węgla może wpłynąć na klimat           geografia
+
+
+E o czym chce wiedzieć więcej?
+
+Q9_1 - jak zachód słońca barwi niebo                                              nic/fizyka                         
+Q9_2 - efekt cieplarniany i jak ludzie mogą mu przeciwdziałać                     geografia
+Q9_3 - co można zrobić, aby zapewnić czyste powietrze i czystą wodą pitną         geografia
+Q9_4 - jak technologia pomaga nam radzić sobie z odpadami, śmieciami i ściekami   geografia
+Q9_5 - jak kontrolować epidemie i choroby                                         biologia
+Q9_6 - choroby przenoszone drogą płciową i jak się przed nimi chronić             biologia
+Q9_7 - co wiemy o hiv/aids i jak go kontrolować                                   biologia
+Q9_8 - jak alkohol i tytoń mogą wpłynąć na organizm                               biologia
+Q9_9 - jak różne narkotyki mogą wpłynąć na organizm                               biologia
+Q9_10 - możliwe zagrożenia związane z promieniowaniem telefonów komórkowych i komputerów  nic
+Q9_11 - jak chronić zagrożone gatunki                                             biologia
+Q9_12 - jak poprawić zbiory w ogrodach i farmach                                  biologia
+Q9_13 - lecznicze wykorzystywanie roślin                                          biologia
+Q9_14 - rolnictwo ekologiczne bez użycia pestydzydów i nawozów sztucznych         biologia
+Q9_15 - jak można oszczędzać i wykorzystywać energie w bardziej efektywny sposób  nie wiem
+Q9_16 - odnawialne źródła energii ze słońca i wiatru                              biologia/geografia
+Q9_17 - jak różne rodzaje żywności są produkowane, konserwowane i przechowywane   chemia 
+Q9_18 - jak moje ciało dojrzewa i rośnie                                          biologia
+Q9_19 - zwierzęta w mojej okolicy                                                 geografia
+Q9_20 - rośliny w mojej okolicy                                                   geografia
+Q9_21 - detergenty, mydła i jak oddziałują                                        chemia
+Q9_22 - eksploracja marsa przez ludzi                                             fizyka
+Q9_23 - wpływ internetu na społeczeństwo                                          nic
+Q9_24 - korzyści i możliwe zagrożenia związane z modyfikacją genów w rolnictwie (GMO) biologia
+Q9_25 - dlaczego czasami religia i nauka są w konflikcie                          nic
+Q9_26 - dlaczego naukowcy czasem nie zgadzają się ze sobą                         nic
+Q9_27 - znani naukowcy i ich życie                                                nic
+Q9_28 - wielkie błędy i pomyłki w badaniach i wynalazkach                         nic
+Q9_29 - wynalazki i odkrycia które zmieniły świat                                 nic
+Q9_30 - najnowsze odkrycia i wynalazki w nauce i technologii                      nic
+Q9_31 - zjawiska, których naukowcy wciąż nie potrafią wyjaśnić                    nic
+
+B Moja praca
+
+Q6_1 - praca raczej z ludźmi niż z przedmiotami
+Q6_2 - pomaganie innym ludziom
+Q6_3 - praca z czymś łatwym i prostym
+Q6_4 - praca z maszynami lub narzędziami
+Q6_5 - artystyczna i twórcza praca w sztuce
+Q6_6 - wyjorzystywanie moich talentów i zdolności
+Q6_7 - tworzenie, projektowanie lub odkrywanie
+Q6_8 - tworzenie nowych rozwiązań
+Q6_9 - posiadanie dużej ilości czasu dla moich przyjaciół
+Q6_10 - podejmowanie decyzji
+Q6_11 - praca niezależna od innych ludzi
+Q6_12 - praca z czymś co uważam za ważne i znaczące
+Q6_13 - praca która pasuje do moich postaw i wartości
+Q6_14 - posiadanie dużej ilości czasu dla mojej rodziny
+Q6_15 - praca która wiąże się z częstymi podróżami
+Q6_16 - praca w miejscu, w którym często zdarza się coś nowego i ekscytującego
+Q6_17 - zarabianie dużych pieniędzy
+Q6_18 - kontrolowanie innych ludzi 
+Q6_19 - bycie sławnym
+Q6_20 - dużo czasu na hobby i zainteresowania
+Q6_21 - bycie swoim własnym "szefem" w swojej pracy
+Q6_22 - rozwijanie lub doskonalenie mojej wiedzy i umiejętności
+Q6_23 - praca w zespole z wieloma osobami wokół mnie
+
+
+D Ja i wyzwania środowiskowe
+
+Q8_1 - zagrożenie dla środowiska ro nie moja sprawa
+Q8_2 - problemy środowiskowe powodują, że przyszłość świata jest ponura i beznadziejna
+Q8_3 - nauka i technologia mogą rozwiązać wszystkie problemy środowiskowe
+Q8_4 - chce rozwiązać problemy środowiska, nawet jeśli wymaga to poświęćenia wielu dóbr
+Q8_5 - mogę osobiście wpływać na to co się dzieje ze światem
+Q8_6 - wciąż możemy znaleźć rozwiązania naszych problemów środowiskowych
+Q8_7 - ludzie za bardzo martwią się problemami środowiskowymi
+Q8_8 - problemy środowiska można rozwiązać bez dużych zmian w naszym sposobie życia
+Q8_9 - ludzie powinni bardziej dbać o ochronę środowiska
+Q8_10 - obowiązkiem krajów bogatych jest rozwiązywanie problemów na świecie
+Q8_11 - problemy środowiskowe należy pozostawić ekspertom
+Q8_12 - z optymizmem patrze w przyszłość
+Q8_13 - prawie każda działalność jest szkodliwa dla śrdowiska
+
+F leckje z przedmiotów ścisłych i przyrodniczych
+
+Q10_1 - są to trudne przedmioty
+Q10_2 - są to interesujące przedmioty
+Q10_3 - otworzyły mi oczy na nowe i ekscytujące zawody
+Q10_4 - lubię je bardziej niż większość innych przedmiotów
+Q10_5 - będą pomocne w moim życiu codziennym
+Q10_6 - dzięki tym przedmiotom patrzę na świat bardziej krytycznie niż sceptycznie
+Q10_7 - te przedmioty zwiększyły moją ciekawość odnośnie spraw, których jeszcze nie potrafimy wyjaśnić
+Q10_8 - pokazały mi znaczenie nauk ścisłych dla naszego stylu życia
+Q10_9 - nauczyły mnie jak lepiej dbać o swoje zdrowie
+Q10_10 - chciałbym zostać naukowcem
+Q10_11 - chciałbym znaleźć prace w obszarze technologii
+Q10_12 - przedmioty te pomogły mi znaleźć rozwiązania dotyczącego zrównoważonego rozwoju w życiu codziennym
+
+G moje opinie o nauce i technologii
+
+Q11_1 - nauka i technologia są ważne dla społeczeństwa
+Q11_2 - nauka i technologia znajdą lek na HIV/AIDS, rak itp
+Q11_3 - nauka i technologia zwiększają możliwości dla przyszłych pokoleń
+Q11_4 - nauka i technologia czynią życie zdrowszym, łatwiejszym i wygodniejszym
+Q11_5 - korzyści płynące z nauki są większe niż złe skutki jakie może ona przynieść
+Q11_6 - nauka i technologia pomogą wyeliminować głód i ubóstwo na świecie
+Q11_7 - nauka i technologia mogą rozwiązać prawie wszystkie problemy
+Q11_8 - nauka i technologia pomagają biednym
+Q11_9 - nauka i technologia są przyczyną problemów ze środowiskiem naturalnym
+Q11_10 - kraje potrzebują nauki i technologii aby się rozwijać
+Q11_11 - nauka i technologia przynoszą korzyści głównie krajom rozwiniętym
+Q11_12 - zawsze powinniśmy ufać temu co mają do powiedzenia naukowcy
+Q11_13 - uczenie się o zrównoważonym rozwoju jest ważne
+
+H moje doświadczenia z mediami społecznościowymi i cyfrowymi
+
+Q12_1 - w szkole w pracy szkolnej korzystam z mediów 
+Q12_2 - korzystam w domu z mediów
+	
+NA LEKCJACH Z PRZEDMIOTÓW ŚCISŁYCH KORZYSTAM Z:
+
+Q13_1 - przeglądarki internetowej
+Q13_2 - zasoby online (np NASA)
+Q13_3 - mediów społecznościowych
+Q13_4 - E-podręczniki
+Q13_5 - klipy wideo w sieci
+Q13_6 - gry komputerowe
+Q13_7 - programowanie i kodowanie
+Q13_8 - cyfrowe narzędzia do produkcji
+Q13_9 - mikrokontrolery
+Q13_10 - projektowanie graficzne i video
+
+INFORMACJE KTÓRE ZNAJDUJE W MEDIACH SPOŁECZNOŚCIOWYCH I CYFROWYCH DO UCZENIA SIĘ PRZEDMIOTÓW ŚCISŁYCH:
+
+Q14_1 - są wiarygodne
+Q14_2 - są lepsze niż podręczniki szkolne
+Q14_3 - są polecane przez szkołę
+Q14_4 - mogłyby być lepiej wykorzystywane w szkole
+
+MOJE POZASZKOLNE DOŚWIADCZENIA NAUKOWE
+
+UCZE SIE KIEDY 
+
+Q15_1 - odwiedzam zoo lub oceanarium
+Q15_2 - odwiedzam planetarium
+Q15_3 - odwiedzam centrum nauki
+Q15_4 - odwiedzam muzeum
+Q15_5 - odwiedzam ogród botaniczny, park, centrum przyrody
+Q15_6 - biorę udział w wydarzeniu naukowym (festiwalu)
+Q15_7 - biorę udział w pozaszkolnym kole zainteresowań
+Q15_8 - odwiedzam strony internetowe
+Q15_9 - korzystam z mediów społecznościowych
+Q15_10 - czytam czasopisma naukowe
+Q15_11 - gram w gry komputerowe
+Q15_12 - oglądam TV
+Q15_13 - oglądam klipy video w internecie
+Q15_14 - używam mediów społecznościowych
+
+J JA JAKO NAUKOWIEC
+
+Q16_1 - ja jako naukowiec chciałbym (OTWARTE)
+Q16_2 - ponieważ (otwarte)
+otwarte
+...
+
+POMYSŁY
+- radar plot z podziałem na kategorie (pokazuje ile osób czym się interesuje)
+- opinie o nauce i technologii w zależności od kategorii (geom_col)
+- sposoby nauki
+- zainteresowanie przedmiotami ścisłymi
+- ochorona środowiska
+
+
+geo - Q5_2,Q5_3,Q5_4, Q5_5,Q5_15, Q21_2, Q7_10, Q7_11, Q9_2, Q9_3, Q9_4, Q9_16, Q9_19, Q9_20
+
+fiz - Q5_10,Q5_11,Q21_5,Q21_8,Q21_9,Q21_18,Q21_17,Q7_8,Q9_1,Q5_12,Q5_13,Q21_16,Q7_2,Q7_7,Q9_22
+
+chem - Q5_1, Q5_8, Q21_5, Q21_6, Q7_9, Q9_17, Q9_21
+
+bio - Q5_6, q5_7, Q5_9, Q21_1, Q21_3, Q21_7, Q21_10, Q21_11, Q21_12, Q21_13, Q21_14,
+         Q21_15, Q21_17, Q7_9, Q9_5, Q9_6, Q9_7, Q9_8, Q9_9, Q9_11, Q9_12, Q9_13, Q9_14, Q9_18, Q9_24
+
+
+środowisko - 'Q8_1bis', 'Q8_2', 'Q8_3', 'Q8_4', 'Q8_5', 'Q8_6', 'Q8_9', 'Q8_10'
+
+czy lubi przedmioty ścisłe? - 'Q10_2', 'Q10_3', 'Q10_4', 'Q10_7'
+
+ważność technologii - 'Q11_1', 'Q11_2', 'Q11_3', 'Q11_5', 'Q11_6', 'Q11_7',
+                      'Q11_8', 'Q11_10','Q11_13'
+
+nauka z mediów - 'Q12_1', 'Q14_1', 'Q14_2'
+
+
+inscape
