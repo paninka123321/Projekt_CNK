@@ -5,6 +5,7 @@ library(ggplot2)
 library(stringi)
 library(tidyverse)
 library(lubridate)
+library(patchwork)
 
 
 Rosesa <-read_sav("~/OneDrive - Politechnika Warszawska/R_studio/ROSES master quest PL_November 9, 2021_07.50 (1).sav")
@@ -16,73 +17,68 @@ Roses <- Rosesa %>%
   filter(czas_ankiety >= 420)
 View(Roses)
 
+# ile brało udział dziewczynek i chlopcow w  ankiecie
+ile <- table(Roses$Q2)
+count(Roses, Q2)
+#14 isob nie chcialo podac xdd
+
 #wykres zainteresowanie a trudnosć
 
 Trudnosc_vs_Zainteresowanie <- Roses %>% 
-  select(IPAddress, Q10_1, Q10_2, Progress, Q2) %>% 
+  select(IPAddress, "Difficulty" = Q10_1, "Interest" = Q10_2, Progress, "Gender" = Q2) %>% 
   filter(Progress >= 50)
 Trudnosc_vs_Zainteresowanie <- na.omit(Trudnosc_vs_Zainteresowanie)
-View(Trudnosc_vs_Zainteresowanie)
+
+Trudnosc_vs_Zainteresowanie[ ,5] <- stri_replace_all_regex(Trudnosc_vs_Zainteresowanie$Gender,"1", "Girl")
+Trudnosc_vs_Zainteresowanie[ ,5] <- stri_replace_all_regex(Trudnosc_vs_Zainteresowanie$Gender,"2", "Boy")
+
+Trudnosc_vs_Zainteresowanie$Difficulty <- as.numeric(Trudnosc_vs_Zainteresowanie$Difficulty)
+Trudnosc_vs_Zainteresowanie$Interest <- as.numeric(Trudnosc_vs_Zainteresowanie$Interest)
+
+#chyba to drop dobrze dziala
+
+Trudnosc_1 <- Trudnosc_vs_Zainteresowanie %>% 
+  select(Difficulty, Interest, Gender) %>% 
+  filter(Difficulty == 1) %>% 
+  group_by(Gender, Interest) %>% 
+  summarise(Amount = n(), .groups = "drop")
+
+Trudnosc_2 <- Trudnosc_vs_Zainteresowanie %>% 
+  select(Difficulty, Interest, Gender) %>% 
+  filter(Difficulty == 2) %>% 
+  group_by(Gender, Interest) %>% 
+  summarise(Amount = n(), .groups = "drop")
+
+Trudnosc_3 <- Trudnosc_vs_Zainteresowanie %>% 
+  select(Difficulty, Interest, Gender) %>% 
+  filter(Difficulty == 3) %>% 
+  group_by(Gender, Interest) %>% 
+  summarise(Amount = n(), .groups = "drop")
+
+Trudnosc_4 <- Trudnosc_vs_Zainteresowanie %>% 
+  select(Difficulty, Interest, Gender) %>% 
+  filter(Difficulty == 4) %>% 
+  group_by(Gender, Interest) %>% 
+  summarise(Amount = n(), .groups = "drop")
+
+chart1 <- Trudnosc_1 %>% ggplot(aes(x = Interest, y = Amount, fill = Gender)) +
+  geom_col() +
+  labs(title = "Very Easy") +
+  theme(legend.position = "none")
+chart2 <- Trudnosc_2 %>% ggplot(aes(x = Interest, y = Amount, fill = Gender)) +
+  geom_col() +
+  labs(title = "Easy") +
+  theme(legend.position = "none")
+chart3 <- Trudnosc_3 %>% ggplot(aes(x = Interest, y = Amount, fill = Gender)) +
+  geom_col()+
+  labs(title = "Not so hard") +
+  theme(legend.position = "none")
+chart4 <- Trudnosc_4 %>% ggplot(aes(x = Interest, y = Amount, fill = Gender)) +
+  geom_col()+
+  labs(title = "Hard")
 
 
-Trudne <- Trudnosc_vs_Zainteresowanie %>% 
-  group_by(Q2, Q10_1) %>% 
-  summarise(Difficulty = n()) %>% 
-  rename(How_much = Q10_1, Gender = Q2)
-
-Interesujace <- Trudnosc_vs_Zainteresowanie %>% 
-  group_by(Q2, Q10_2) %>% 
-  summarise(Interest = n()) %>% 
-  rename(How_much = Q10_2, Gender = Q2)
-
-
-Trudne_vs_Interesujace <- Trudne %>% 
-  inner_join(Interesujace, by = c("Q2", "Q10_1" = "Q10_2")) %>% 
-  rename(How_much = Q10_1, Gender = Q2)
-Trudne_vs_Interesujace <- Trudne_vs_Interesujace
-
-
-
-
-
-
-
-
-Wykres <- Wykres %>% 
-  gather(Zgadzam, Number_of_people, - c(Gender, How_much))
-
-Wykres %>% ggplot(aes(x = Zgadzam, y = Number_of_people), fill = Gender)  
-  geom_col()
-
-
-  
-
-
-
-
-
-#zliczenie chlopcow i dziewczyn
-
-
-
-
-
-
-a <- data_frame(table(Trudnosc_vs_Zainteresowanie[,c(Q2, Q10_1 = Q10_2)]))
-?inner_join
-
-
-
-Trudnosc_vs_Zainteresowanie %>% 
-  select(Q10_1, Q2) %>% 
-  
-
-
-
-
-
-
-
+chart1 + chart2 + chart3 + chart4 + plot_annotation(title = "Measure of difficulty")
 
 
 
@@ -175,12 +171,6 @@ gg<-Cikawosc_srednia %>%
 
 gg <- rbind(rep(4,length(gg)) , rep(1,length(gg)) , gg)
 radarchart(gg)
-
-
-
-
-
-
 
 
 

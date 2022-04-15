@@ -15,6 +15,37 @@ Roses <- Rosesa %>%
   mutate(czas_ankiety = as_datetime(EndDate) - as_datetime(StartDate)) %>% 
   filter(czas_ankiety >= 420)
 
+szkolne_geo <- Roses %>% 
+  select(StartDate,IPAddress,Q5_2,Q5_3,Q5_4, Q5_5,Q5_15, Q21_2, Q7_10, Q7_11, Q9_2, Q9_3, Q9_4, Q9_16, Q9_19, Q9_20)
+
+
+geo <- szkolne_geo %>% 
+  mutate(geo_mean_ciek= apply(szkolne_geo[,-c(1,2)],1,function(x){mean(x,na.rm = TRUE)})) %>% 
+  filter(geo_mean_ciek != 'NaN', geo_mean_ciek >= 3.5)
+
+szkolne_fiz <- Roses %>% 
+  select(StartDate, IPAddress,Q5_10,Q5_11,Q21_5,Q21_8,Q21_9,Q21_18,Q21_17,Q7_8,Q9_1,Q5_12,Q5_13,Q21_16,Q7_2,Q7_7,Q9_22)
+
+fiz <- szkolne_fiz %>% 
+  mutate(fiz_mean_ciek= apply(szkolne_fiz[,-c(1,2)],1,function(x){mean(x,na.rm = TRUE)})) %>% 
+  filter(fiz_mean_ciek != 'NaN', fiz_mean_ciek >= 3.5)
+
+szkolne_chem <- Roses %>% 
+  select(StartDate,EndDate, IPAddress, Q5_1, Q5_8, Q21_5, Q21_6, Q7_9, Q9_17, Q9_21)
+
+chem <- szkolne_chem %>% 
+  mutate(chem_mean_ciek= apply(szkolne_chem[,-c(1,2,3)],1,function(x){mean(x,na.rm = TRUE)})) %>% 
+  filter(chem_mean_ciek != 'NaN', chem_mean_ciek >= 3.5)
+
+szkolne_bio <-Roses %>% 
+  select(StartDate,IPAddress, Q5_6, Q5_7, Q5_9, Q21_1, Q21_3, Q21_7, Q21_10, Q21_11, Q21_12, Q21_13, Q21_14,
+         Q21_15, Q21_17, Q7_9, Q9_5, Q9_6, Q9_7, Q9_8, Q9_9, Q9_11, Q9_12, Q9_13, Q9_14, Q9_18, Q9_24)
+
+bio <- szkolne_bio %>% 
+  mutate(bio_mean_ciek= apply(szkolne_bio[,-c(1,2)],1,function(x){mean(x,na.rm = TRUE)})) %>% 
+  filter(bio_mean_ciek != 'NaN', bio_mean_ciek >= 3.5)
+
+
 ## uczę się gdy:
 fiz_int_szkola <- Roses %>% 
   select(StartDate, IPAddress, Q8_1:Q15_14) %>% 
@@ -30,11 +61,6 @@ interere_fiz <- fiz_int_szkola %>%
             outdoor_learning = mean(zoo_garden_festivalx, na.rm=TRUE),
             media = mean(internet_TVx, na.rm=TRUE)) %>% 
   mutate(nazwa = 'Physics', .before = 1)
-
-?mutate
-
-
-
 
 
 bio_int_szkola <- Roses %>% 
@@ -117,7 +143,8 @@ zainteresowania_waskie[ ,2] <- stri_replace_all_regex(zainteresowania_waskie$prz
 
 ggplot(zainteresowania_waskie, aes(x=przedmiot, y=wartosci, fill = nazwa))+
   geom_col(aes(fill = nazwa), position = position_dodge()) +
-  labs(title = "How you learn?" , y = "mean", fill = "subject")+
-  theme(axis.title.x = element_blank())
+  labs(title = "What is your preferred way of learning?",y = "mean", fill = "subject")+
+  xlab("The way of learning")+
+  theme_bw()
 
 
