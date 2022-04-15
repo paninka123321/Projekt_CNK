@@ -3,9 +3,7 @@ install.packages('fmsb')
 library(dplyr)
 library(haven)
 library(fmsb)
-k
-j
-n
+#czy widać co pisze?
 library(ggplot2)
 install.packages("usethis")
 libraryinstall.packages("stringi")
