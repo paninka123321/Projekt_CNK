@@ -1,22 +1,90 @@
-install.packages("dplyr")
-install.packages('fmsb')
 library(dplyr)
 library(haven)
 library(fmsb)
-#czy widać co pisze?
 library(ggplot2)
-install.packages("usethis")
-libraryinstall.packages("stringi")
 library(stringi)
-install.packages("tidyverse")
 library(tidyverse)
-install.packages("lubridate")
 library(lubridate)
+
+
 Rosesa <-read_sav("~/OneDrive - Politechnika Warszawska/R_studio/ROSES master quest PL_November 9, 2021_07.50 (1).sav")
 View(Roses)
+
+#wywalamy fake odpowiedzi
 Roses <- Rosesa %>% 
   mutate(czas_ankiety = as_datetime(EndDate) - as_datetime(StartDate)) %>% 
   filter(czas_ankiety >= 420)
+View(Roses)
+
+#wykres zainteresowanie a trudnosć
+
+Trudnosc_vs_Zainteresowanie <- Roses %>% 
+  select(IPAddress, Q10_1, Q10_2, Progress, Q2) %>% 
+  filter(Progress >= 50)
+Trudnosc_vs_Zainteresowanie <- na.omit(Trudnosc_vs_Zainteresowanie)
+View(Trudnosc_vs_Zainteresowanie)
+
+
+Trudne <- Trudnosc_vs_Zainteresowanie %>% 
+  group_by(Q2, Q10_1) %>% 
+  summarise(Difficulty = n()) %>% 
+  rename(How_much = Q10_1, Gender = Q2)
+
+Interesujace <- Trudnosc_vs_Zainteresowanie %>% 
+  group_by(Q2, Q10_2) %>% 
+  summarise(Interest = n()) %>% 
+  rename(How_much = Q10_2, Gender = Q2)
+
+
+Trudne_vs_Interesujace <- Trudne %>% 
+  inner_join(Interesujace, by = c("Q2", "Q10_1" = "Q10_2")) %>% 
+  rename(How_much = Q10_1, Gender = Q2)
+Trudne_vs_Interesujace <- Trudne_vs_Interesujace
+
+
+
+
+
+
+
+
+Wykres <- Wykres %>% 
+  gather(Zgadzam, Number_of_people, - c(Gender, How_much))
+
+Wykres %>% ggplot(aes(x = Zgadzam, y = Number_of_people), fill = Gender)  
+  geom_col()
+
+
+  
+
+
+
+
+
+#zliczenie chlopcow i dziewczyn
+
+
+
+
+
+
+a <- data_frame(table(Trudnosc_vs_Zainteresowanie[,c(Q2, Q10_1 = Q10_2)]))
+?inner_join
+
+
+
+Trudnosc_vs_Zainteresowanie %>% 
+  select(Q10_1, Q2) %>% 
+  
+
+
+
+
+
+
+
+
+
 
 #pytania zwi?zane z chemi?. Licz? ?rednie zainteresowanie os?b tymi zagadnieniami
 Chemia<- Roses %>% 
@@ -293,6 +361,7 @@ zainteresowania<- bind_rows(interere_bio, interere_fiz, interere_chem, interere_
 
 zainteresowania_waskie<- zainteresowania %>% 
   gather(przedmiot, wartosci, -nazwa)
+
 
 zainteresowania_waskie[ ,2] <- stri_replace_all_regex(zainteresowania_waskie$przedmiot,"_", "\n")
 
