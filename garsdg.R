@@ -85,14 +85,14 @@ Ekologia2<- Roses %>%
 Cikawosc_srednia2<-left_join(Cikawosc_srednia2,Ekologia2,c('IPAddress','StartDate'))
 
 gg2<-Cikawosc_srednia2 %>% 
-  select(c('Q2.x','Cikaw_geo', 'Cikaw_chem', 'Cikaw_bio', 'Cikaw_fiz','Cikaw_med', 'Cikaw_eko', 'Cikaw_astro'))%>% 
+  select('Q2.x',"Geography" ='Cikaw_geo', "Chemistry" ='Cikaw_chem', "Biology" = 'Cikaw_bio', "Physics" = 'Cikaw_fiz', "Medicine" = 'Cikaw_med', "Ecology" = 'Cikaw_eko', "Astronomy" = 'Cikaw_astro'))%>% 
   filter(Cikaw_geo != 'NaN', Cikaw_fiz != 'NaN', Cikaw_chem != 'NaN', Cikaw_bio != 'NaN', Cikaw_med != 'NaN', Cikaw_eko != 'NaN', Cikaw_astro != 'NaN') %>% 
   group_by(Q2.x) %>% 
   summarise(across(1:7,mean)) %>% 
   select(-c('Q2.x')) 
 
 gg2_dziew<-Cikawosc_srednia2 %>% 
-  select(c('Q2.x','Cikaw_geo', 'Cikaw_chem', 'Cikaw_bio', 'Cikaw_fiz','Cikaw_med', 'Cikaw_eko', 'Cikaw_astro'))%>% 
+  select('Q2.x',"Geography" ='Cikaw_geo', "Chemistry" ='Cikaw_chem', "Biology" = 'Cikaw_bio', "Physics" = 'Cikaw_fiz', "Medicine" = 'Cikaw_med', "Ecology" = 'Cikaw_eko', "Astronomy" = 'Cikaw_astro'))%>% 
   filter(Cikaw_geo != 'NaN', Cikaw_fiz != 'NaN', Cikaw_chem != 'NaN', Cikaw_bio != 'NaN', Cikaw_med != 'NaN', Cikaw_eko != 'NaN', Cikaw_astro != 'NaN')%>% 
   group_by(Q2.x)%>% 
   summarise(across(1:7,mean)) %>% 
@@ -102,7 +102,7 @@ gg2_dziew<-Cikawosc_srednia2 %>%
 
 
 gg2_chlop<-Cikawosc_srednia2 %>% 
-  select(c('Q2.x','Cikaw_geo', 'Cikaw_chem', 'Cikaw_bio', 'Cikaw_fiz','Cikaw_med', 'Cikaw_eko', 'Cikaw_astro'))%>% 
+  select('Q2.x',"Geography" ='Cikaw_geo', "Chemistry" ='Cikaw_chem', "Biology" = 'Cikaw_bio', "Physics" = 'Cikaw_fiz', "Medicine" = 'Cikaw_med', "Ecology" = 'Cikaw_eko', "Astronomy" = 'Cikaw_astro'))%>% 
   filter(Cikaw_geo != 'NaN', Cikaw_fiz != 'NaN', Cikaw_chem != 'NaN', Cikaw_bio != 'NaN', Cikaw_med != 'NaN', Cikaw_eko != 'NaN', Cikaw_astro != 'NaN') %>% 
   group_by(Q2.x) %>% 
   summarise(across(1:7,mean)) %>% 
@@ -153,5 +153,5 @@ p1
 p2
 
 p2+p1  +  # Flip axes
-  plot_annotation(title = "Average interest in a subject",
+  plot_annotation(title = "Average interest in a field of",
                   subtitle = 'by gender')
