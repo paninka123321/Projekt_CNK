@@ -152,6 +152,7 @@ p1
 
 p2
 
-p2+p1  +  # Flip axes
+p2+ plot_spacer() + p1  +  # Flip axes
   plot_annotation(title = "Average interest in a field of",
-                  subtitle = 'by gender')
+                  subtitle = 'by gender') +
+plot_layout(widths = 0, guides = 'collect')
