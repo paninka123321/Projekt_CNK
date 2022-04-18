@@ -130,7 +130,7 @@ gg2_dziew<-as.data.frame(t(gg2_dziew))
 gg2_dziew<-gg2_dziew %>% 
   cbind(przedmiot = row.names(gg2_dziew)) 
 row.names(gg2_dziew)<- 1:dim(gg2_dziew)[1]
-gg2_dziew$V1<-as.numeric(gg2_dziew$V1)*(-1)
+gg2_dziew$V1<-as.numeric(gg2_dziew$V1)
 
 gg2t<- gg2_chlop %>% 
   rbind(gg2_dziew) %>% 
@@ -153,14 +153,14 @@ p1<-ggplot(gg2_chlop, aes(x = przedmiot, y = V1,fill = V2)) +
 
 
 p2<-ggplot(gg2_dziew, aes(x = przedmiot, y = V1,fill = V2)) +  
-  geom_col( width = .4)+ 
-  scale_y_continuous(breaks = seq(-3, 0, 0.6))+
+  geom_col( width = .4)+
   coord_flip()+
   theme(axis.title.y = element_blank(),axis.title.x = element_blank(), 
         plot.margin = margin(r = 0), axis.line.y.right = element_line(),
         axis.line.x = element_line())+
   labs(title = 'Female')+
-  theme(legend.position = 'none')
+  theme(legend.position = 'none')+
+  scale_y_reverse(breaks = seq(0, 3, by = 0.6))
 
 
 
@@ -169,7 +169,7 @@ p1
 
 p2
 
-p2  + p1  +  # Flip axes
+p2  + p1  + plot_spacer() # Flip axes
   plot_annotation(title = "Average interest in a field of",
                   subtitle = 'by gender') 
   
