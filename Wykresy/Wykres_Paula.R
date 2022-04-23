@@ -24,8 +24,8 @@ Trudnosc_vs_Zainteresowanie <- Roses %>%
   filter(Progress >= 50)
 Trudnosc_vs_Zainteresowanie <- na.omit(Trudnosc_vs_Zainteresowanie)
 
-Trudnosc_vs_Zainteresowanie[ ,5] <- stri_replace_all_regex(Trudnosc_vs_Zainteresowanie$Gender,"1", "Girl")
-Trudnosc_vs_Zainteresowanie[ ,5] <- stri_replace_all_regex(Trudnosc_vs_Zainteresowanie$Gender,"2", "Boy")
+Trudnosc_vs_Zainteresowanie[ ,5] <- stri_replace_all_regex(Trudnosc_vs_Zainteresowanie$Gender,"1", "Female")
+Trudnosc_vs_Zainteresowanie[ ,5] <- stri_replace_all_regex(Trudnosc_vs_Zainteresowanie$Gender,"2", "Male")
 
 Trudnosc_vs_Zainteresowanie$Difficulty <- as.numeric(Trudnosc_vs_Zainteresowanie$Difficulty)
 Trudnosc_vs_Zainteresowanie$Interest <- as.numeric(Trudnosc_vs_Zainteresowanie$Interest)
