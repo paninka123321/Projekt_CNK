@@ -36,9 +36,12 @@ Trudnosc_1 <- Trudnosc_vs_Zainteresowanie %>%
   select(Difficulty, Interest, Gender) %>% 
   filter(Difficulty == 1) %>% 
   group_by(Gender, Interest) %>% 
-  summarise(Amount = n(), .groups = "drop")
-#195 dzieci
+  summarise(Amount = n(), .groups = "drop") 
 
+#195 dzieci
+#74 dziewczynki, 121 chlopcow
+
+#-----------------------------------------------------------
 
 Trudnosc_2 <- Trudnosc_vs_Zainteresowanie %>% 
   select(Difficulty, Interest, Gender) %>% 
@@ -46,6 +49,9 @@ Trudnosc_2 <- Trudnosc_vs_Zainteresowanie %>%
   group_by(Gender, Interest) %>% 
   summarise(Amount = n(), .groups = "drop")
 #438 dzieci
+#234 dziewczynki i 204 chlopców
+
+#-----------------------------------------------------------
 
 Trudnosc_3 <- Trudnosc_vs_Zainteresowanie %>% 
   select(Difficulty, Interest, Gender) %>% 
@@ -53,6 +59,9 @@ Trudnosc_3 <- Trudnosc_vs_Zainteresowanie %>%
   group_by(Gender, Interest) %>% 
   summarise(Amount = n(), .groups = "drop")
 #445 dzieci
+#247 dziewczynki i 198 chlopcow
+
+#---------------------------------------------------------
 
 Trudnosc_4 <- Trudnosc_vs_Zainteresowanie %>% 
   select(Difficulty, Interest, Gender) %>% 
@@ -60,31 +69,33 @@ Trudnosc_4 <- Trudnosc_vs_Zainteresowanie %>%
   group_by(Gender, Interest) %>% 
   summarise(Amount = n(), .groups = "drop")
 #554 dzieci
+#324 dziewczynki i 230 chlopcow
+
 
 chart1 <- Trudnosc_1 %>% ggplot(aes(x = Interest, y = Amount, fill = Gender)) +
-  geom_col() +
+  geom_col(position = position_dodge()) +
   labs(title = "Very Easy") +
   theme(legend.position = "none") +
   theme_bw() +
-  ylim(0, 180)
+  ylim(0, 115)
 
 chart2 <- Trudnosc_2 %>% ggplot(aes(x = Interest, y = Amount, fill = Gender)) +
-  geom_col() +
+  geom_col(position = position_dodge()) +
   labs(title = "Easy") +
   theme(legend.position = "none")+
   theme_bw() +
-  ylim(0, 180)
+  ylim(0, 115)
 chart3 <- Trudnosc_3 %>% ggplot(aes(x = Interest, y = Amount, fill = Gender)) +
-  geom_col()+
+  geom_col(position = position_dodge())+
   labs(title = "Not so hard") +
   theme(legend.position = "none") + 
   theme_bw() +
-  ylim(0, 180)
+  ylim(0, 115)
 chart4 <- Trudnosc_4 %>% ggplot(aes(x = Interest, y = Amount, fill = Gender)) +
-  geom_col()+
+  geom_col(position = position_dodge())+
   labs(title = "Hard") + 
   theme_bw()+
-  ylim(0, 180)
+  ylim(0, 115)
 
 
 chart1 + chart2 + chart3 + chart4 + plot_annotation(title = "Measure of difficulty") +
